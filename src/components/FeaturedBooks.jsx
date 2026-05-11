@@ -1,4 +1,5 @@
-import { Button, Chip, Link } from "@heroui/react";
+import BookCard from "./BookCard";
+
 
 
 
@@ -10,33 +11,13 @@ const FeaturedBooks =async () => {
 
 
     return (
-      <section className="max-w-7xl mx-auto py-16">
-            <h2 className="text-4xl font-bold text-center mb-10">
-                Featured Books
-            </h2>
+      <div>
+            <h1 className="text-2xl font-bold my-5">Featured Books</h1>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {books.map((book) => (
-                    <div
-                        key={book.id}
-                        className="card bg-base-100 shadow-xl"
-                    >
-                        <figure className="relative w-full aspect-square">
-                            <img src={book.image_url} fill='true'  alt={book.title} className="object-cover rounded-xl" />
-                        </figure>
-
-                        <Chip size="sm" className="absolute right-2 top-2"> {book.category}</Chip>
-
-                        <div className="card-body">
-                            <h2 className="card-title">{book.title}</h2>
-                            <p>{book.author}</p>
-                    <Button variant="outline" className={'w-full'}> View Details</Button>
-                           
-                        </div>
-                    </div>
-                ))}
+            <div className="grid grid-cols-4 gap-5">
+                {books.map(book => <BookCard key={book.id} book={book} />)}
             </div>
-        </section>
+        </div>
     );
 };
 

@@ -1,14 +1,16 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
-  reactCompiler: true,
   images: {
     remotePatterns: [
       {
-        hostname: 'i.pinimg.com'
-      }
-    ]
-  }
+        protocol: "https",
+        hostname: "covers.openlibrary.org",
+      },
+      {
+        protocol: "https",
+        hostname: "i.ibb.co",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

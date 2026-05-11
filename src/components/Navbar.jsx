@@ -16,10 +16,10 @@ const Navbar = () => {
             <Link href={"/"}>Home</Link>
           </li>
           <li>
-            <Link href={"/all-photos"}>All Books</Link>
+            <Link href={"/all-books"}>All Books</Link>
           </li>
         <li>
-            <Link href={"/profile"}> My Profile</Link>
+            <Link href={"/my-profile"}> My Profile</Link>
           </li>
         </ul>
 
