@@ -1,5 +1,5 @@
 import BookCard from "@/components/BookCard";
-// import Category from "@/components/Category";
+import Category from "@/components/Category";
 
 
 const AllBooksPage = async (searchParams) => {
@@ -15,7 +15,7 @@ const res = await fetch('https://book-borrowing-app.vercel.app/data.json')
 
             <h1 className="text-2xl font-bold m-4">All Books</h1>
 
-            {/* <category/> */}
+            <Category/>
 
             <div className="grid grid-cols-4 gap-5">
                 {filteredBooks.map(book=> <BookCard key={book.id} book={book}/>)}
