@@ -1,4 +1,4 @@
-use client";
+"use client";
 
 import { UpdateUserModal } from "@/components/UpdateUserModal";
 import { authClient } from "@/lib/auth-client";
